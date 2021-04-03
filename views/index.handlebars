@@ -1,15 +1,13 @@
-<header>
+<section class="container">
     <img class="burger-image" src="/assets/image/hamburger.png" alt="burger">
     <h1>Eat-Da-Burger</h1>
-</header>
-<main>
     <div class="row">
-        <div class="col=sm-6">
+        <div class="col-sm-5">
             <ul>
                 {{#each burgers}}
                 {{#unless devoured}}
-                <div class="burgers-list mt-5 d-flex flex-column flex-sm-row justify-content-between">
-                    <div class="burger-id mt-5 d-flex flex-column flex-sm-row justify-content-between">{{id}}</div>
+                <div class="d-flex justify-content-between align-items-center burger-item">
+                    <div class="burger-id d-flex justify-content-center align-items-center">{{id}}</div>
                     <div class="burger-name">{{burger_name}}</div>
                     <button class="devour-button-devour" data-id="{{id}}">To be Devoured!</button>
                 </div>
@@ -17,14 +15,15 @@
                 {{/each}}
             </ul>
         </div>
-        <div class="col=sm-6">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-5">
             <ul>
                 {{#each burgers}}
                 {{#if devoured}}
-                <div class="burgers-list mt-5 d-flex flex-column flex-sm-row justify-content-between">
-                    <div class="burger-id mt-5 d-flex flex-column flex-sm-row justify-content-between">{{id}}</div>
+                <div class="d-flex justify-content-between align-items-center burger-item">
+                    <div class="burger-id d-flex justify-content-between align-items-center">{{id}}</div>
                     <div class="burger-name">{{burger_name}}</div>
-                    <button class="devour-button-devoured" data-id="{{id}}">Devoured!</button>
+                    <button class="devour-button-devoured">Devoured!</button>
                 </div>
                 {{/if}}
                 {{/each}}
@@ -34,9 +33,9 @@
     <div class="d-flex flex-column justify-content-center align-items-center">
         <p class="form-add">Add to devour your burger of choice!
         <p>
-        <form id="burger-form" class="d-flex flex-column justify-content-center align-items-center">
+        <form id="start-form" class="d-flex flex-column align-items-center">
             <input id="burger-select" class="form-input" type="text">
             <input class="submit-button" type="submit" value="Submit">
         </form>
     </div>
-</main>
+    </main>

@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     });
 
-    const submitBurger = document.getElementById('burger-form');
+    const submitBurger = document.getElementById('start-form');
 
     submitBurger.addEventListener('submit', (e) => {
         e.preventDefault();
